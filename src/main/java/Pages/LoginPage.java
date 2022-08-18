@@ -21,6 +21,14 @@ public class LoginPage extends  BasePage{
         driver.get(this.url);
     }
 
+    public void deleteAllCookes () {
+        driver.navigate().to("edge://settings/siteData");
+        driver.findElement(By.xpath("//button[contains(@aria-labelledby, 'domain_saucedemo.com')]")).click();
+        driver.findElement(By.xpath("//button[@title='Remove www.saucedemo.com']")).click();
+
+        this.openPage();
+    }
+
     public void login () {
         this.setUserName(userName);
         this.setPassword(password);

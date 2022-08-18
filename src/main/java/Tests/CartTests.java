@@ -1,7 +1,6 @@
 package Tests;
 
 import Pages.*;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,13 +14,7 @@ public class CartTests extends BaseTest{
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
-
-        //delete cookies from domen www.saucedemo.com
-        driver.navigate().to("edge://settings/siteData");
-        driver.findElement(By.xpath("//button[contains(@aria-labelledby, 'domain_saucedemo.com')]")).click();
-        driver.findElement(By.xpath("//button[@title='Remove www.saucedemo.com']")).click();
-
-        loginPage.openPage();
+        loginPage.deleteAllCookes();
         loginPage.login();
 
         ProductsPage productsPage = new ProductsPage(driver);
@@ -73,13 +66,7 @@ public class CartTests extends BaseTest{
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
-
-        //delete cookies from domen www.saucedemo.com
-        driver.navigate().to("edge://settings/siteData");
-        driver.findElement(By.xpath("//button[contains(@aria-labelledby, 'domain_saucedemo.com')]")).click();
-        driver.findElement(By.xpath("//button[@title='Remove www.saucedemo.com']")).click();
-
-        loginPage.openPage();
+        loginPage.deleteAllCookes();
         loginPage.login();
 
         ProductsPage productsPage = new ProductsPage(driver);
@@ -105,13 +92,7 @@ public class CartTests extends BaseTest{
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
-
-        //delete cookies from domen www.saucedemo.com
-        driver.navigate().to("edge://settings/siteData");
-        driver.findElement(By.xpath("//button[contains(@aria-labelledby, 'domain_saucedemo.com')]")).click();
-        driver.findElement(By.xpath("//button[@title='Remove www.saucedemo.com']")).click();
-
-        loginPage.openPage();
+        loginPage.deleteAllCookes();
         loginPage.login();
 
         ProductsPage productsPage = new ProductsPage(driver);
