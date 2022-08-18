@@ -39,6 +39,10 @@ public class LoginPage extends  BasePage{
         driver.findElement(By.id("login-button")).click();
     }
 
+    public boolean errorMessage () {
+        return driver.findElement(By.xpath("//h3[@data-test='error']")).getText().contains("Epic sadface");
+    }
+
     public void closePage() {
         driver.quit();
     }

@@ -36,9 +36,7 @@ public class VerifyLogin extends BaseTest{
         loginPage.setUserName("standard_user");
         loginPage.clickOnLogin();
 
-        List<WebElement> errorMsg = driver.findElements(By.className("error-message-container"));
-
-        Assert.assertEquals(errorMsg.size() == 1, true, "Login successful");
+        Assert.assertEquals(loginPage.errorMessage(), true, "Login successful");
 
     }
 
@@ -52,9 +50,7 @@ public class VerifyLogin extends BaseTest{
         loginPage.setPassword(password);
         loginPage.clickOnLogin();
 
-        List<WebElement> errorMsg = driver.findElements(By.className("error-message-container"));
-
-        Assert.assertEquals(errorMsg.size() == 1, true, "Login successful");
+        Assert.assertEquals(loginPage.errorMessage(), true, "Login successful");
 
     }
 
